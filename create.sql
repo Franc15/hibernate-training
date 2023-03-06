@@ -1,0 +1,10 @@
+create sequence authors_SEQ start with 1 increment by 50;
+create sequence books_SEQ start with 1 increment by 50;
+create table authors (id bigint not null, first_name varchar(255), last_name varchar(255), primary key (id));
+create table books (id bigint not null, title varchar(255), author_id bigint, primary key (id));
+alter table if exists books add constraint FKfjixh2vym2cvfj3ufxj91jem7 foreign key (author_id) references authors;
+create sequence authors_SEQ start with 1 increment by 50;
+create sequence books_SEQ start with 1 increment by 50;
+create table authors (id bigint not null, first_name varchar(255), last_name varchar(255), primary key (id));
+create table books (id bigint not null, title varchar(255), author_id bigint, primary key (id));
+alter table if exists books add constraint FKfjixh2vym2cvfj3ufxj91jem7 foreign key (author_id) references authors;
