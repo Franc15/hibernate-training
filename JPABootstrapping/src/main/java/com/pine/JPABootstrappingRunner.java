@@ -15,7 +15,8 @@ public class JPABootstrappingRunner {
         // add new author and books
 //        addNewValues(entityManager);
 
-        EntityGraph<?> entityGraph = entityManager.createEntityGraph("graph.authorBooks");
+        EntityGraph<Author> entityGraph = entityManager.createEntityGraph(Author.class);
+        entityGraph.addAttributeNodes("books");
         TypedQuery<Author> query = entityManager.createQuery("SELECT a FROM Author a", Author.class)
                 .setHint("javax.persistence.fetchgraph", entityGraph);
         List<Author> authors = query.getResultList();
