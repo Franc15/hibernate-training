@@ -1,9 +1,6 @@
 package com.pine;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
-import jakarta.persistence.TypedQuery;
+import jakarta.persistence.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,9 +13,11 @@ public class JPABootstrappingRunner {
         entityManager.getTransaction().begin();
 
         // add new author and books
-        addNewValues(entityManager);
+//        addNewValues(entityManager);
 
-        TypedQuery<Author> query = entityManager.createQuery("SELECT a FROM Author a LEFT JOIN FETCH a.books", Author.class);
+        EntityGraph<?> entityGraph = entityManager.createEntityGraph("graph.authorBooks");
+        TypedQuery<Author> query = entityManager.createQuery("SELECT a FROM Author a", Author.class)
+                .setHint("javax.persistence.fetchgraph", entityGraph);
         List<Author> authors = query.getResultList();
 
         entityManager.getTransaction().commit();

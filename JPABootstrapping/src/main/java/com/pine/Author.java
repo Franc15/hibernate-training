@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+@NamedEntityGraph(
+        name = "graph.authorBooks",
+        attributeNodes = @NamedAttributeNode("books")
+)
 @Entity
 @Table(name = "authors")
 public class Author {
