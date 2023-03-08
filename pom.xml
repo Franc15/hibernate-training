@@ -14,6 +14,7 @@
         <module>JPABootstrapping</module>
         <module>ManyToManyMapping</module>
         <module>HQL</module>
+        <module>WorkingWithObjects</module>
     </modules>
 
     <properties>
