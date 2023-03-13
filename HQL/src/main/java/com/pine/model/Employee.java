@@ -14,7 +14,7 @@ public class Employee {
     private String name;
     @Column(name = "emp_salary")
     private double salary;
-    @OneToOne(mappedBy = "employee")
+    @OneToOne(mappedBy = "employee", fetch = FetchType.LAZY)
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private Address address;
 

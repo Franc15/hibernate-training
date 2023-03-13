@@ -15,6 +15,8 @@
         <module>ManyToManyMapping</module>
         <module>HQL</module>
         <module>WorkingWithObjects</module>
+        <module>NativeQueries</module>
+        <module>DaoModule</module>
     </modules>
 
     <properties>

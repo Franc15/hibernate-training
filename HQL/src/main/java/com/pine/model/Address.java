@@ -22,7 +22,7 @@ public class Address {
     @Column(name = "city")
     private String city;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @PrimaryKeyJoinColumn
     private Employee employee;
 
