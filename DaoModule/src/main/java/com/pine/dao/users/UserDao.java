@@ -1,4 +1,7 @@
-package com.pine;
+package com.pine.dao.users;
+
+import com.pine.dao.Dao;
+import com.pine.users.User;
 
 import java.util.ArrayList;
 import java.util.List;

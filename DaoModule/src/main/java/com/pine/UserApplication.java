@@ -1,5 +1,9 @@
 package com.pine;
 
+import com.pine.dao.Dao;
+import com.pine.dao.users.UserDao;
+import com.pine.users.User;
+
 import java.util.Optional;
 
 public class UserApplication {
@@ -16,7 +20,6 @@ public class UserApplication {
         userDao.save(new User("Julie", "juliess@gmail.com"));
 
         userDao.getAll().forEach(user -> System.out.println(user.getName()));
-
     }
 
     private static User getUser(long id) {
