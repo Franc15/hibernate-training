@@ -1,4 +1,4 @@
-package com.pine;
+package com.pine.main;
 
 import com.pine.dao.Dao;
 import com.pine.dao.users.UserDao;

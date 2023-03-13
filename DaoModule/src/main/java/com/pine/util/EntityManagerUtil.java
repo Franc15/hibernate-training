@@ -1,4 +1,4 @@
-package com.pine;
+package com.pine.util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

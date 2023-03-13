@@ -1,6 +1,6 @@
 package com.pine.dao.users;
 
-import com.pine.EntityManagerUtil;
+import com.pine.util.EntityManagerUtil;
 import com.pine.dao.Dao;
 import com.pine.users.User;
 import jakarta.persistence.EntityManager;
